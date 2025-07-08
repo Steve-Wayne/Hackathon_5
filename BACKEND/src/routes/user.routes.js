@@ -1,11 +1,12 @@
-import { Router, RateLimit } from "express";
+import { Router } from "express";
 import { registerUser, loginUser, logoutUser, refreshAccessToken, changeCurrentPassword } from "../controllers/user.controller.js";
 import { verifyJWT } from "../middleware/auth.middleware.js";
 
 const router = Router();
 
 // set up rate limiter: maximum of 100 requests per 15 minutes
-const limiter = RateLimit({
+var RateLimit = require('express-rate-limit');
+var limiter = RateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
   max: 100, // max 100 requests per windowMs
 });
