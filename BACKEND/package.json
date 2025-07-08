@@ -14,7 +14,7 @@
   "author": "Urvik Sharma",
   "license": "ISC",
   "dependencies": {
-    "@langchain/community": "^0.3.36",
+    "@langchain/community": "^0.3.48",
     "@langchain/core": "^0.3.42",
     "@langchain/groq": "^0.2.0",
     "@langchain/langgraph": "^0.2.57",
