@@ -18,13 +18,10 @@ app.use(express.static("public"));
 app.use(cookieParser());
 app.use(csrf());
 
-//routes
 import userRouter from "./routes/user.routes.js";
 import chatbotRouter from "./routes/chatbot.routes.js";
 
-//routes declaration
 app.use("/api/v1/users", userRouter);
 app.use("/api/v1/chatbot", chatbotRouter);
 
-// https://localhost:8000/api/v1/users/register
 export { app };
