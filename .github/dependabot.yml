@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /BACKEND
+    schedule:
+      interval: weekly
+  - package-ecosystem: npm
+    directory: /FRONTEND /hack
+    schedule:
+      interval: weekly
+  - package-ecosystem: github-actions
+    directory: /.github/workflows
+    schedule:
+      interval: weekly
